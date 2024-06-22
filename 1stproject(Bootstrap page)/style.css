@@ -1,0 +1,394 @@
+/* google font و جيبها من cairo نوعية الخط  */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500&display=swap');
+
+/* Defaults */
+/* تستخدمها في اي مشروع */
+*{
+    font-family: 'cairo';
+    /* ديما اعمل الخاصية دي في الاول علشان ممكن حجم بتاع التاجز يخليه يطلع برة الصفحة */
+    box-sizing: border-box;
+    /* حنستخدمهم علشان ميبقاش فيه مسافة من الاطراف في الصفحة */
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+header{
+    /* حيظهروا جنب بعض divsحيخلي ال */
+    display: flex;
+    /*  بيوزع البينات بعيد عن بعضها افقيا*/
+    justify-content: space-between;
+    background-color: #2c3E50;
+    /* (من فوق لتحت)حيخلي البيانات في النصف عموديا */
+    align-items: center;
+    color: white;
+    /* من فوق و تحت 0 و من الشمال و اليمين 100 */
+    padding: 0px 100px;
+    border-top: solid crimson 4px;
+    /* head still fixed when you scrolling the page but you need width=100% bec, his size don't complete line */
+    position: fixed;
+    width: 100%;
+}
+
+header a{
+    color: white;
+
+    /* links حيشيل الخط التحت  */
+    text-decoration: none;
+    /* paddingعكس ال  */
+    margin-right: 10px;
+    font-size: 20px;
+    transition: ease 1s;
+}
+
+header a:hover{
+    color: #1ABC9C;
+    font-size: 21px;
+    
+}
+
+.carsour{
+    /* veiw height of full screen(100%)*/
+    height: 100vh;
+    display: flex;
+    /* keep the text in the center */
+    align-items: center;
+    color: white;
+    background-image: url(images/ahoom.webp);
+    background-size: cover;
+    /* بيخلي الصورة و كانها ثابتة */
+    background-attachment: fixed;
+    /* background-blend-mode , background-color: rgba(0,0,0,.4) <= هو ده اللون الداكن بتاع الخلفية بتاعة الصورة */
+    background-blend-mode: overlay;
+    background-color: rgba(0,0,0,.4);
+    /* image will be in the center */
+    background-position: center;
+}
+
+.carsour div{
+    margin-left: 80px;
+}
+
+.carsour span{
+    color: crimson;
+}
+
+.carsour h2{
+    color: #2c3E50;
+}
+
+.carsour a{
+    color: white;
+    text-decoration: none;
+    background-color: #1ABC9C;
+    border-radius:10px;
+    /* it allow you to control the (a link) size and padding and margin and heigth and so on */
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    transition: ease 1s;
+}
+
+.carsour a:hover{
+    transform: scale(1.1);
+    background-color: #2c3E50;
+}
+
+.Services h2{
+    text-align: center;
+    margin: 30px 0px;
+}
+
+.Services .container{
+    display: flex;
+    padding: 0px 80px;
+    /* not allow all cards in the same line */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Services .card{
+    margin-right: 20px;
+    box-shadow: 3px 3px 6px 6px #ccc;
+    padding: 10px;
+    /* to keep the size of cards fixed in any device*/
+    width: 16em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card h3{
+    color: crimson;
+    font-weight: 1000;
+}
+
+.card p{
+    font-size: 14px;
+}
+/* (> div) it means the first div  */
+/* div of icons */
+.Services .card > div {
+    color: #2c3E50;
+    font-size: 50px;
+}
+
+.Protofilio{
+    background-color: #2c3E50;
+    text-align: center;
+    padding: 30px 100px;
+}
+
+.Protofilio h2{
+    color: white;
+    margin-bottom: 20px;
+    border-bottom: solid crimson;
+    /* it makes border-bottom take size equal to the size of the word(Protofilio) */
+    display: inline-block;
+}
+
+.Protofilio .container{
+    display: flex;
+    /* not allow all cards in the same line */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Protofilio .card{
+    background-color: white;
+    border: solid;
+    border-radius: 20px;
+    margin-right: 20px;
+    width: 16em;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    /* card حيشيل الزيادات الفي الصورة و حيظبطها علي ال  */
+    overflow: hidden;
+    /*card لل hieght لو الطول طلع مش مكفي مش حيقطع جزء من الكلام او الصورة لو عاوز ادي  */
+    min-height: 250px;
+}
+
+.Protofilio button{
+    border-radius: 10px;
+    color: white;
+    background-color: #1ABC9C;
+    padding: 0px 8px;
+    border: none;
+    transition: 1s ease;
+}
+
+.Protofilio button:hover{
+    transform: scale(1.1);
+}
+
+.Protofilio .card-desc{
+    margin: 0px 10px;
+}
+
+.Protofilio .card-desc p{
+    font-size: 12px;
+    line-height: 1.32;
+    font-weight: 700;
+}
+
+.Protofilio .card-desc button{
+    /*لا ينكمش button حيخلي ال  */
+    flex-shrink: 0;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.notilla{
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+}
+
+.notilla p{
+    font-size: 13px;
+}
+
+.notilla h2{
+    color: crimson;
+}
+
+.notilla-desc{
+    width: 60%;
+    text-align: center;
+}
+
+.notilla-img{
+    width: 40%;
+    margin-right: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px opx 2px rgb(0 0 0 / 40%);
+}
+
+.notilla-img image{
+    width: 75;
+}
+
+.about{
+    padding: 50px;
+    background-image: url(images/office.avif);
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: rgba(0,0,0,.4);
+    background-position: center;
+    min-height: 80vh;
+    text-align: center;
+}
+
+.about h2{
+    color: white;
+    text-align: center;
+    border-bottom: solid white;
+    display: inline-block;
+}
+
+
+.about >div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.about img{
+    border-radius: 50%;
+    width: 16em;
+    height: 16em;
+    border: solid white;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.notilla-img-rtl{
+    width: 40%;
+    margin-left: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px opx 2px rgb(0 0 0 / 40%);
+}
+
+.contact{
+    padding: 100px;
+    background: linear-gradient(0deg, rgba(26, 188, 173, 1) 22%, rgba(29, 91, 153, 0.8911939775910365) 64%);
+    text-align: center;
+}
+
+.contact h2{
+    color: white;
+    margin-bottom: 50px;
+    border-bottom: solid;
+    display: inline-block;
+}
+ 
+.input_form{
+    margin-bottom: 20px;
+    /*كله body في ال  fixed  بيبقا  fixedعلي عكس ال  relative كله فحنستخدم ال  body بس مش في ال  div بس يكون جوة ال  fixed يبقا  input علشان احنا عاوزين ال */
+    /*body بنسبة لل fixed و relative بنسبة ل absolute  */
+    position: relative;
+    width: 100%;
+}
+
+.input_form input:hover~label,
+.input_form input:valid~label{
+    top: 13%;
+    transform: translateY(-40%);
+}
+.input_form label{
+    font-size: 16px;
+    /*body بنسبة لل fixed و relative بنسبة ل absolute  */
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    /* it makes the lable in the center of the input */
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.send{
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2c3E50;
+    color: white;
+    transition: all 1s;
+}
+
+.send:hover{
+    transform: scale(1.1);
+    background-color: #1ABC9C;
+}
+.input_form input{
+    border: none;
+    border-bottom: solid #1ABC9C;
+    outline: none;
+    padding: 0px 5px;
+    width: 100%;
+    height: 50px;
+}
+
+footer{
+    text-align: center;
+    background-color: #2c3E50;
+    color: white;
+    padding: 20px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: crimson; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:#1ABC9C; 
+  }
+
+ .up{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: crimson;
+    padding: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: white;
+ } 
+
+ .up:hover{
+    background: #1ABC9C;
+ }
+
+ .map{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+ }
+
+ .map iframe{
+    width: 100%!important;
+    padding: 20px;
+    box-shadow: 0 10px 35px 0px lightblue !important ;
+ }
